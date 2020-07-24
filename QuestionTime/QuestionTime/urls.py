@@ -15,6 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path, re_path
+from django.conf.urls.static import static
+from django.conf import settings
+from django.views.static import serve
+
 
 from django_registration.backends.one_step.views import RegistrationView
 
@@ -55,4 +59,7 @@ urlpatterns = [
          include("rest_auth.registration.urls")),
 
     re_path(r"^.*$", IndexTemplateView.as_view(), name="entry-point")
+    
 ]
+
+

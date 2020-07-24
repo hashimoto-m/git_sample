@@ -11,6 +11,8 @@
             :to="{ name: 'question', params: { slug: question.slug } }"
             class="question-link"
             >{{ question.content }}
+          <img :src="api/MEDIA_URL/question.image">
+
           </router-link>
         </h2>
         <p>Answers: {{ question.answers_count }}</p>
