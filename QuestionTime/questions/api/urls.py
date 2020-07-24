@@ -1,11 +1,11 @@
-from django.urls import include, path
+from django.urls import include, path 
 from rest_framework.routers import DefaultRouter
 
 from questions.api import views as qv
 
-from django.conf import settings
-from django.contrib.staticfiles.urls import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+
+
 
 router = DefaultRouter()
 router.register(r"questions", qv.QuestionViewSet)
@@ -29,6 +29,6 @@ urlpatterns = [
          qv.AnswerLikeAPIView.as_view(),
          name="answer-like")
 ]
-urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
  
